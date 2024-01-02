@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+</head>
+<body>
+    <h4>Name of food: <span th:text="${recipeInfo.strMeal}"></span></h4>
+    <h4>Category of food: <span th:text="${recipeInfo.strCategory}"></span></h4>
+    <h4>Origin of food: <span th:text="${recipeInfo.strArea}"></span></h4>
+    <!-- <h4>Name of food: <span th:text="${recipeInfo.strMeal}"></span></h4>
+    <h4>Name of food: <span th:text="${recipeInfo.strMeal}"></span></h4>
+    <h4>Name of food: <span th:text="${recipeInfo.strMeal}"></span></h4>
+    <h4>Name of food: <span th:text="${recipeInfo.strMeal}"></span></h4> -->
+
+    <span th:if="${recipeInfo == 'F'}">Female</span>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECIPE STEPS</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+
+<body class="hollandaise">
+
+    <h1>Welcome to Delicious Recipes!</h1>
+
+    <input type="hidden" name="email" th:value="${email}">
+
+    <form th:action="@{/recipesteps}" th:object="${user}" method="post">
+        <h2 th:text="${recipe.meal}"></h2>
+
+        <input type="hidden" name="strMeal" th:value="${recipe.title}">
+        <input type="hidden" name="strCategory" th:value="${recipe.id}">
+        <input type="hidden" name="strMealThumb" th:value="${recipe.title}">
+        <input type="hidden" name="strYoutube" th:value="${recipe.id}">
+        <input type="hidden" name="strIngredients" th:value="${recipe.getImageUrl}">
+        <input type="hidden" name="strMeasures" th:value="${recipe.title}">
+
+        <div th:each="step, idx : ${lsOfRecipeSteps}"></div>
+        <input type="hidden" name="strInstruction" th:value="${recipe.getImageUrl}">
+
+        <button type="submit" class="btn btn-link" value="favourites">Add to Favourites</button>
+    </form>
+
+    <a href="/search">
+        <button>Search for more recipes</button>
+    </a>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+sg\edu\nus\iss\miniproject\service\RecipeService.class
+sg\edu\nus\iss\miniproject\model\Meal.class
+sg\edu\nus\iss\miniproject\MiniprojectApplication.class
+sg\edu\nus\iss\miniproject\model\Meals.class
+sg\edu\nus\iss\miniproject\config\RedisConfig.class
+sg\edu\nus\iss\miniproject\controller\RecipeRestController.class
+sg\edu\nus\iss\miniproject\model\Recipe.class
+sg\edu\nus\iss\miniproject\model\User.class
+sg\edu\nus\iss\miniproject\service\UserService.class
+sg\edu\nus\iss\miniproject\model\RecipeSteps.class
+sg\edu\nus\iss\miniproject\repository\UserRepository.class
+sg\edu\nus\iss\miniproject\controller\RecipeController.class

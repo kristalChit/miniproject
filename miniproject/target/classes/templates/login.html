@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
+  <title>LOGIN</title>
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+
+<body class="favourites">
+
+  <h1>Welcome to Delicious Recipes!</h1>
+
+  <form th:action="@{/login}" th:object="${user}" method="post">
+    <div class="mb-3 mt-3">
+      <input type="email" class="form-control" name="email" placeholder="Email" required>
+    </div>
+    <div class="mb-3 mt-3">
+      <input type="password" class="form-control" name="password" placeholder="Password" required>
+    </div>
+
+    <input type="submit" value="Log In" class="btn btn-block btn-outline-primary">
+    <br>
+    <a href="/register">Not a user? Sign up now!</a></p>
+  </form>
+  </div>
+
+</body>
+
+</html>

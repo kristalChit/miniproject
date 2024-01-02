@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+
+<body>
+    <table>
+        <tr th:each="recipe: ${recipeList}">
+            <!-- <td th:text="${recipe.idMeal}" ></td> -->
+            <td>
+                <a th:href="@{/recipe/{id}(id=${recipe.idMeal})}" th:text="${recipe.strMeal}">
+            </td>
+            </a>
+
+            <!-- <a th:href="@{/category/edit/{id}(id=${category.idCategory})}">view</a> -->
+        </tr>
+    </table>
+
+    <div th:if="${recipeList == null}">
+        <span>There were no results for your query. Try again.</span>
+        <a href="/search">
+            <button>Back</button>
+        </a>
+    </div>
+</body>
+
+</html>

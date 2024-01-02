@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAVOURITES</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+
+<body class="hollandaise">
+
+    <div class="container">
+        <h1>Here are your Favorites!</h1>
+
+        <input type="hidden" name="email" th:value="${email}">
+
+        <div th:each="recipe : ${favourites}" class="col-lg-6 menu-item filter-starters">
+            <form th:action="@{/recipes/steps/(id=${recipe.id})}" th:object="${recipe}" method="post"></form>
+            <h2 th:text="${recipe.meal}"></h2>
+            <img th:src="${recipe.mealThumb}" alt="Recipe Image" class="menu-img">
+            <h2 th:text="${recipe.id}"></h2>
+            <button type="submit">View this recipe</button> 
+
+            <br>
+            <button type="button" data:th:href="@{'/home'}">Back to Home</button>
+        </div>
+
+</body>
+
+</html>
